@@ -9,6 +9,8 @@
  *
  * @author Ingles
  */
+import javax.swing.JOptionPane;
+
 public class Nombre extends javax.swing.JFrame {
 
     /**
@@ -27,13 +29,21 @@ public class Nombre extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        textnombre = new javax.swing.JLabel();
+        btnsaludo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Rockwell Condensed", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 0, 255));
-        jLabel1.setText("Mariana");
+        textnombre.setFont(new java.awt.Font("Rockwell Condensed", 0, 24)); // NOI18N
+        textnombre.setForeground(new java.awt.Color(255, 0, 255));
+        textnombre.setText("Mariana");
+
+        btnsaludo.setText("Saludo!");
+        btnsaludo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnsaludoMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -41,19 +51,28 @@ public class Nombre extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(159, 159, 159)
-                .addComponent(jLabel1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnsaludo)
+                    .addComponent(textnombre))
                 .addContainerGap(159, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(129, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(142, 142, 142))
+                .addComponent(textnombre)
+                .addGap(18, 18, 18)
+                .addComponent(btnsaludo)
+                .addGap(101, 101, 101))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnsaludoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnsaludoMouseClicked
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Hola!!");
+    }//GEN-LAST:event_btnsaludoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -91,6 +110,7 @@ public class Nombre extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnsaludo;
+    private javax.swing.JLabel textnombre;
     // End of variables declaration//GEN-END:variables
 }
