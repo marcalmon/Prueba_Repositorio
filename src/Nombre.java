@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * 
+ * Calmón, Mariana
+ * Jueves 03/08/2017
+ * 
  */
 
 /**
@@ -31,6 +32,7 @@ public class Nombre extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Rockwell Condensed", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 0, 255));
         jLabel1.setText("Mariana");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
